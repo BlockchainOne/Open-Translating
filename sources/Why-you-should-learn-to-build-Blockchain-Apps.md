@@ -1,4 +1,4 @@
-# Why you should learn to build Blockchain Apps
+# Why you should learn to build Blockchain Apps【Ashton翻译中】
 
 Last week we released [CryptoZombies](http://cryptozombies.io/) Lesson 4, where we continue our journey to build an army of zombies with Solidity, Ethereum’s programming language. As of this lesson, **over 90,000 people have used** [CryptoZombies](http://cryptozombies.io/) and are getting more familiar with developing Decentralized Applications ( *DApps* ) on Ethereum.
 
