@@ -1,3 +1,4 @@
+Translating by lucas
 # 6 Ways to Monetize Your Ethereum DApps (Part 1)
 
 In [our last article](https://medium.com/loom-network/why-you-should-learn-to-build-blockchain-apps-be9a92e8d08e), we went over **why** you should learn to build Blockchain DApps.
