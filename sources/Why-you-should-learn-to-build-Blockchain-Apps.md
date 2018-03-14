@@ -1,10 +1,10 @@
 # 为什么你应该学习搭建区块链应用
  
-上周我们发布了 [CryptoZombies](http://cryptozombies.io/) 第四课，继续使用以太坊编程语言 Solidity 去构建一只僵尸军队。通过这堂课，**超过 9000 人** 使用了 [CryptoZombies](http://cryptozombies.io/) 并更加熟悉了在以太坊上进行去中心化应用（ *DApps* ）开发。
+上周我们发布了 [CryptoZombies](http://cryptozombies.io/) 第四课，继续使用以太坊编程语言 Solidity 去构建一只僵尸军队。通过这堂课，**超过 9000 人** 使用了 [CryptoZombies](http://cryptozombies.io/) 并更加熟悉了在以太坊上进行去中心化应用（*DApps*）开发。
 
 我们到现在还没探讨的是**为什么你要加入到这个学习中来？你能从中得到什么？这真的有意义么？**
 
-一个非常确定的事实是当前对区块链开发人员（ 也经常被成为区块链工程师 ）的需求是[远超供应](https://www.computerworld.com/article/3235972/it-careers/blockchain-jobs-continue-to-explode-offer-salary-premiums.html)的 ，并且这种需求随着时间推移还在不断增长。
+一个非常确定的事实是当前对区块链开发人员（也经常被成为区块链工程师）的需求是[远超供应](https://www.computerworld.com/article/3235972/it-careers/blockchain-jobs-continue-to-explode-offer-salary-premiums.html)的 ，并且这种需求随着时间推移还在不断增长。
 
 ![](https://i.imgur.com/atm4GhR.png)
 
@@ -16,7 +16,7 @@
 
 让我们先看看当前两大应用商店 *Google Play* 和 *App Store* 的一些数据。
 
-2009 年 3 月，*Google Play* 应用商店（当时称为Android Market）上面有 *2300* 个应用程序。到 2010 年 10 月底，这个数字已经增加到 *100000[* [1](https://en.wikipedia.org/wiki/Google_Play#History_of_app_growth) *]* 。 到 2017 年 2 月，Google Play 应用商店上的应用数量大约在 *270万* 上下的范围。
+2009 年 3 月，*Google Play* 应用商店（当时称为 Android Market）上面有 *2300* 个应用程序。到 2010 年 10 月底，这个数字已经增加到 *100000[* [1](https://en.wikipedia.org/wiki/Google_Play#History_of_app_growth) *]* 。 到 2017 年 2 月，Google Play 应用商店上的应用数量大约在 *270万* 上下的范围。
 
 *App Store* 表现出类似的增长：
 
