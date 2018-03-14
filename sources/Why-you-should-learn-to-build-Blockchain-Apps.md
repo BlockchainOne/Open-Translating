@@ -8,7 +8,7 @@
 
 ![](https://i.imgur.com/atm4GhR.png)
 
-区块链和比特币是 2017 年 Upwork [季度技能指数](https://www.upwork.com/blog/2017/11/freelance-skills-upwork-q3-2017/)前3种增长最快的技能中的两种。
+区块链和比特币是 2017 年 Upwork [季度技能指数](https://www.upwork.com/blog/2017/11/freelance-skills-upwork-q3-2017/)前 3 种增长最快的技能中的两种。
 
 在本文中，我们将看看一些类似的创新性平台的历史增长情况，以及你作为区块链开发人员可以开始赚钱的一些方法。
 
@@ -16,7 +16,7 @@
 
 让我们先看看当前两大应用商店 *Google Play* 和 *App Store* 的一些数据。
 
-2009年3月，*Google Play* 应用商店（当时称为Android Market）上面有 *2300* 个应用程序。到2010年10月底，这个数字已经增加到 *100000[* [1](https://en.wikipedia.org/wiki/Google_Play#History_of_app_growth) *]* 。 到2017年2月，Google Play 应用商店上的应用数量大约在 *270万* 上下的范围。
+2009 年 3 月，*Google Play* 应用商店（当时称为Android Market）上面有 *2300* 个应用程序。到 2010 年 10 月底，这个数字已经增加到 *100000[* [1](https://en.wikipedia.org/wiki/Google_Play#History_of_app_growth) *]* 。 到 2017 年 2 月，Google Play 应用商店上的应用数量大约在 *270万* 上下的范围。
 
 *App Store* 表现出类似的增长：
 
@@ -25,7 +25,7 @@ App Store 在 2008-2017 期间的增长
 
 # 历史会重演吗？
  
-如果区块链真的类似于90年代初的互联网，那么 DApps 就与应用程序商店的早期阶段类似。未来几年，我们将看到 DApp 软件开发人员的大幅增长。
+如果区块链真的类似于 90 年代初的互联网，那么 DApps 就与应用程序商店的早期阶段类似。未来几年，我们将看到 DApp 软件开发人员的大幅增长。
 
 我会从维基百科的 [App Store (iOS) ](https://en.wikipedia.org/wiki/App_Store_%28iOS%29) 页面提取一段话，
 
@@ -35,7 +35,7 @@ App Store 在 2008-2017 期间的增长
 
 > The term *D*App has become a popular buzzword; in January 2019, *D*App was awarded the honor of being 2018’s “Word of the Year”  
 
-这里的关键点不在于上面的预测 *会不会* 应验，而在于 **什么时候** 应验。
+这里的关键点不在于上面的预测 **会不会** 应验，而在于 **什么时候** 应验。
 
 # 你真的需要关注这些吗？
 
@@ -57,7 +57,7 @@ App Store 在 2008-2017 期间的增长
 
 以 CryptoKitties 为例，您可以构建一个货币化的 DApp。这里有巨大的潜力 -  CryptoKitties 在推出后的第一个月销售额便超过了 1200 万美元。
 
-在 [DappRadar](https://dappradar.com/) 上，你可以看到不同 DApp 们正在进行的交易量，[CryptoCountries](https://cryptocountries.io/) 目前以过去7天达 4000 万美元的销售额位列榜首。开发人员可以在每次交易中获取 2-5％ 的分成，所以你应该去算算构建自己的[基于 DApp 的游戏](https://cryptozombies.io/)是个什么样的盈利机会。
+在 [DappRadar](https://dappradar.com/) 上，你可以看到不同 DApp 们正在进行的交易量，[CryptoCountries](https://cryptocountries.io/) 目前以过去 7 天达 4000 万美元的销售额位列榜首。开发人员可以在每次交易中获取 2-5％ 的分成，所以你应该去算算构建自己的[基于 DApp 的游戏](https://cryptozombies.io/)是个什么样的盈利机会。
 
 在我们的下一篇文章中，我们将深入介绍可以用在你的DApp中去盈利的各种不同的商业模式。
 
@@ -108,7 +108,7 @@ contract GustavoCoin is MintableToken {
 
 许多大公司都在不间断的招聘开发人员来尝试扩充他们自己的企业解决方案。
 
-![](https://i.imgur.com/KdvIaRx.png)Visa job listing at LinkedIn
+![](https://i.imgur.com/KdvIaRx.png)Visa 在 LinkedIn 上公布的职位
  
 >然而，根据[Visa要求8年的行业经验](https://www.indeed.com/m/viewjob?jk=b36f4dbb6b6140d5&amp;from=serp)来判断，要么你是 [Satoshi Nakamoto](https://en.wikipedia.org/wiki/Satoshi_Nakamoto)，要么你已经可以在自己的私人岛屿上喝玛格丽特酒了。
 
@@ -118,13 +118,13 @@ contract GustavoCoin is MintableToken {
 
 随着越来越多的关于编写这些不可停止应用程序的学习资源公开可见，有抱负的开发人员将能够顺利地从传统开发过渡到区块链开发。
 
-对于Loom Network来说，我们通过围绕相关工具和教程构建社区来帮助实现这一目标，这些工具和教程用于学习在Ethereum这个发展最快的区块链开发平台上构建DApps。
+对于 Loom Network 来说，我们通过围绕相关工具和教程构建社区来帮助实现这一目标，这些工具和教程用于学习在以太坊这个发展最快的区块链开发平台上构建 DApps。
 
 **下是我们建议您开始学习区块链开发的方式：**
 
-1. 前往 [CryptoZombies.io](http://cryptozombies.io/)，我们的互动代码学校，教你编写Ethereum DApps，通过构建你自己的加密可收集游戏。
-2. 加入我们的[电报社区](http://t.me/loomnetwork) ，加入到讨论DApp开发和缩放以太坊的人群中。
-3. 查看我们的[Medium page](http://medium.com/loom-network) 以获取关于Solidity开发的其他文章。
+1. 前往 [CryptoZombies.io](http://cryptozombies.io/)，我们的互动代码学校，教你编写以太坊 DApps，通过构建你自己的加密可收集游戏。
+2. 加入我们的[电报社区](http://t.me/loomnetwork) ，加入到讨论 DApp 开发和缩放以太坊的人群中。
+3. 查看我们的[Medium page](http://medium.com/loom-network) 以获取关于 Solidity 开发的其他文章。
 
 ----
 via: https://medium.com/loom-network/why-you-should-learn-to-build-blockchain-apps-be9a92e8d08e
