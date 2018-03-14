@@ -20,8 +20,8 @@
 
 *App Store* 表现出类似的增长：
 
-![](https://i.imgur.com/Wn46Rwb.png) 
-App Store 在 2008-2017 期间的增长 | [来源：https://www.statista.com/statistics/263795/number-of-available-apps-in-the-apple-app-store/](https://www.statista.com/statistics/263795/number-of-available-apps-in-the-apple-app-store）
+![](https://i.imgur.com/Wn46Rwb.png)  
+App Store 在 2008-2017 期间的增长 
 
 # 历史会重演吗？
  
