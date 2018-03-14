@@ -1,100 +1,134 @@
-# Why you should learn to build Blockchain Apps【Ashton翻译中】
+# 为什么你应该学习搭建区块链应用
+ 
+上周我们发布了 [CryptoZombies](http://cryptozombies.io/) 第四课，继续使用以太坊编程语言 Solidity 去构建一只僵尸军队。通过这堂课，**超过 9000 人** 使用了 [CryptoZombies](http://cryptozombies.io/) 并更加熟悉了在以太坊上进行去中心化应用（ *DApps* ）开发。
 
-Last week we released [CryptoZombies](http://cryptozombies.io/) Lesson 4, where we continue our journey to build an army of zombies with Solidity, Ethereum’s programming language. As of this lesson, **over 90,000 people have used** [CryptoZombies](http://cryptozombies.io/) and are getting more familiar with developing Decentralized Applications ( *DApps* ) on Ethereum.
+我们到现在还没探讨的是**为什么你要加入到这个学习中来？你能从中得到什么？这真的有意义么？**
 
-What we have not discussed so far is **why should you get involved in this space? What is there to gain? Does it really matter?**
-
-The one sure thing is that demand for Blockchain Developers (often called Blockchain Engineers) exceeds the supply [by far](https://www.computerworld.com/article/3235972/it-careers/blockchain-jobs-continue-to-explode-offer-salary-premiums.html), and this demand is increasing over time:
+一个非常确定的事实是当前对区块链开发人员（ 也经常被成为区块链工程师 ）的需求是[远超供应](https://www.computerworld.com/article/3235972/it-careers/blockchain-jobs-continue-to-explode-offer-salary-premiums.html)的 ，并且这种需求随着时间推移还在不断增长。
 
 ![](https://i.imgur.com/atm4GhR.png)
 
-Blockchain and Bitcoin were 2 of the top 3 fastest-growing skills on Upwork’s [Quarterly Skills Index](https://www.upwork.com/blog/2017/11/freelance-skills-upwork-q3-2017/) in 2017.
+区块链和比特币是 2017 年 Upwork [季度技能指数](https://www.upwork.com/blog/2017/11/freelance-skills-upwork-q3-2017/)前3种增长最快的技能中的两种。
 
-In this article, we’re going to look at similar historical growth of innovative platforms, and some ways you can start making money as a blockchain developer as you develop your skillset.
+在本文中，我们将看看一些类似的创新性平台的历史增长情况，以及你作为区块链开发人员可以开始赚钱的一些方法。
 
-Let’s take some data from the two biggest app stores of today, Google’s *Google Play* and Apple’s *App Store.*
+# 从过去学到的经验: Google Play 与 App Store
 
-In March 2009 the *Google Play* store (called Android Market at the time) had *2,300* apps available. By the end of October 2010 that number had increased to *100,000[* [1](https://en.wikipedia.org/wiki/Google_Play#History_of_app_growth) *].* In February 2017 the amount of apps on Google Play store was around in the range of *2.7 million.*
+让我们先看看当前两大应用商店 *Google Play* 和 *App Store* 的一些数据。
 
-*App Store* exhibited similar growth:
+2009年3月，*Google Play* 应用商店（当时称为Android Market）上面有 *2300* 个应用程序。到2010年10月底，这个数字已经增加到 *100000[* [1](https://en.wikipedia.org/wiki/Google_Play#History_of_app_growth) *]* 。 到2017年2月，Google Play 应用商店上的应用数量大约在 *270万* 上下的范围。
 
-![](https://i.imgur.com/Wn46Rwb.png)
+*App Store* 表现出类似的增长：
 
-App Store growth 2008–2017 | [source: https://www.statista.com/statistics/263795/number-of-available-apps-in-the-apple-app-store/](https://www.statista.com/statistics/263795/number-of-available-apps-in-the-apple-app-store/)
+![](https://i.imgur.com/Wn46Rwb.png) App Store 在 2008-2017 期间的增长 | [来源：https：//www.statista.com/statistics/263795/number-of-available-apps-in-the-apple-app-store/](https://www.statista.com/statistics/263795/number-of-available-apps-in-the-apple-app-store）
 
-If blockchain really is analogous to the internet in the early 90s, then DApps are in an analogous stage to the early-days of the app stores. We are going to see massive growth in DApp software developers over the coming years.
+# 历史会重演吗？
+ 
+如果区块链真的类似于90年代初的互联网，那么 DApps 就与应用程序商店的早期阶段类似。未来几年，我们将看到 DApp 软件开发人员的大幅增长。
 
-I will take a phrase from Wikipedia’s [App Store (iOS)](https://en.wikipedia.org/wiki/App_Store_%28iOS%29) page,
+我会从维基百科的 [App Store (iOS) ](https://en.wikipedia.org/wiki/App_Store_%28iOS%29) 页面提取一段话，
 
-> The term *app* has become a popular [buzzword](https://en.wikipedia.org/wiki/Buzzword); in January 2011, *app* was awarded the honor of being 2010’s “Word of the Year” [ [1](https://www.americandialect.org/American-Dialect-Society-2010-Word-of-the-Year-PRESS-RELEASE.pdf) ]  
+> The term *app* has become a popular [buzzword](https://en.wikipedia.org/wiki/Buzzword); in January 2011, *app* was awarded the honor of being 2010’s “Word of the Year” [ [1](https://www.americandialect.org/American-Dialect-Society-2010-Word-of-the-Year-PRESS-RELEASE.pdf) ] 
 
-…and make a bold prediction and adapt it to the DApp ecosystem:
+将其应用于 DApp 生态系统并做出大胆预测：
 
-> The term *D* App has become a popular buzzword; in January 2019, *D* App was awarded the honor of being 2018’s “Word of the Year”  
+> The term *D*App has become a popular buzzword; in January 2019, *D*App was awarded the honor of being 2018’s “Word of the Year”  
 
-What actually matters here is not *if* the above happens. It is **when**.
+这里的关键点不在于上面的预测 *会不会* 应验，而在于 **什么时候** 应验。
 
-If you are excited by:
+# 你真的需要关注这些吗？
 
-* Decentralization
-* Working with brilliant passionate minds
-* Innovation
-* Cutting-edge technology
-* High salaries (this happens mainly due to demand being much higher than available supply)
-…then you should get familiar with blockchain development. Currently individuals, startups and even larger companies[ [2](http://www.nasdaq.com/article/kodak-pivots-toward-blockchain-technology-cm907246) ] [❲3](https://www.indeed.com/viewjob?jk=ee47354b3dca28dd&amp;from=tp-serp&amp;tk=1c49tige60n3a7um) ] are gradually joining the blockchain industry with their own products and they are actively looking for more employees to join their projects.
+如果你对下面所列的词汇或事情感到兴奋：
 
-There are a number of ways you can start making money building DApps, depending on your current skill level.
+* 去中心化
+* 与才华横溢的充满激情的大脑们一起工作
+* 创新
+* 前沿技术
+* 薪水高（这主要是因为职位需求远高于供应）  
 
-Taking CryptoKitties as an example, you can build a monetized DApp. There is huge potential here — CryptoKitties did over $12 million USD in sales in its first month after launch.
+那么你应该熟悉区块链开发。目前，个人与初创公司甚至更大的公司 [[2](http://www.nasdaq.com/article/kodak-pivots-toward-blockchain-technology-cm907246)] [[3](https：//www.indeed.com/viewjob?jk=ee47354b3dca28dd&amp;from=tp-serp&amp;tk=1c49tige60n3a7um)] 都在逐渐带着他们自己的产品加入区块链行业，他们正在积极寻找更多的员工加入他们的项目。
 
-If you look on [DappRadar](https://dappradar.com/), you can see the volume of transactions different DApps are doing, with [CryptoCountries](https://cryptocountries.io/) currently topping the list at almost $40,000,000 in sales over the past 7 days. The developers take 2–5% of every transaction, so you can do the math and see what a profitable opportunity building your own [DApp-based game can be](https://cryptozombies.io/).
+# 作为区块链开发者去赚钱的方式
 
-In our next article, we’ll be covering in-depth the different business models you can use in your DApps to generate profits.
+根据你当前的技能，有很多通过搭建 Dapp 赚钱的方式。
 
-[Gitcoin](https://gitcoin.co/) aims to ‘push open source forward’ by attaching bounties denominated in Ether for solving github issues. Currently, there are more than $8.000 attached among 20 bounties, waiting to be claimed!
+## 1. 构建你自己的 DApp 并将其货币化
 
-All you need to do is solve an issue, and if the bounty submitter approves it, you will get paid in Ether via a smart contract.
+以 CryptoKitties 为例，您可以构建一个货币化的 DApp。这里有巨大的潜力 -  CryptoKitties 在推出后的第一个月销售额便超过了 1200 万美元。
+
+在 [DappRadar](https://dappradar.com/) 上，你可以看到不同 DApp 们正在进行的交易量，[CryptoCountries](https://cryptocountries.io/) 目前以过去7天达 4000 万美元的销售额位列榜首。开发人员可以在每次交易中获取 2-5％ 的分成，所以你应该去算算构建自己的[基于 DApp 的游戏](https://cryptozombies.io/)是个什么样的盈利机会。
+
+在我们的下一篇文章中，我们将深入介绍可以用在你的DApp中去盈利的各种不同的商业模式。
+
+## 2. 通过为开源项目做贡献来获取报酬
+
+[Gitcoin](https://gitcoin.co/) 旨在通过在 github issues 上附加以以太币为标注的悬赏来推动开源社区的发展。目前，已经有超过 8000 美元附加到 20 个悬赏上面等待被领取！
+
+所有你需要做的就是解决一个问题，然后如果悬赏提交者批准了你的方案，你将通过智能合约获取以以太币支付的报酬。
 
 ![](https://i.imgur.com/PLeqtRz.png)
+Gitcoin是如何工作的? | [https://gitcoin.co](https://gitcoin.co/)  
 
-How does Gitcoin work? | [https://gitcoin.co](https://gitcoin.co/)
+## 3. 创建你自己的创业公司或加密货币
+ 
+感谢 [OpenZeppelin](https://blog.zeppelin.solutions/how-to-create-token-and-initial-coin-offering-contracts-using-truffle-openzeppelin-1b7a5dae99b6)，它使得发布一个安全可靠并可以用于价值交易的以太坊代币就像编写几行代码一样简单。在你完成代币的开发之后，就可以通过 ICO 来筹集资金了。
 
-Launching an Ethereum token that is secure and can be used to trade value is as trivial as writing a few lines of code, thanks to [OpenZeppelin](https://blog.zeppelin.solutions/how-to-create-token-and-initial-coin-offering-contracts-using-truffle-openzeppelin-1b7a5dae99b6). After you develop the coin, you can raise capital through an Initial Coin Offering (ICO).
+下面是用来创建 GustavoCoin 的 10 行代码（来源：https://blog.zeppelin.solutions/how-to-create-token-and-initial-coin-offering-contracts-using-truffle-openzeppelin-1b7a5dae99b6）：
+```
+pragma solidity 0.4.19;
 
-MVP of GustavoCoin in 10 lines of Code | [https://blog.zeppelin.solutions/how-to-create-token-and-initial-coin-offering-contracts-using-truffle-openzeppelin-1b7a5dae99b6](https://blog.zeppelin.solutions/how-to-create-token-and-initial-coin-offering-contracts-using-truffle-openzeppelin-1b7a5dae99b6)
+import 'zeppelin-solidity/contracts/token/MintableToken.sol';
 
-Of course, your project must have some kind of value in order to raise the required capital. (Or not, as has been the case with many high-profile ICOs — but that is another discussion).
+contract GustavoCoin is MintableToken {
+    string public name = "GUSTAVO COIN";
+    string public symbol = "GUS";
+    uint8 public decimals = 18;
+}
+```
 
-If building your own startup isn’t your thing, you can get hired as a developer on someone else’s. There are a number of new projects springing up all the time that are looking for developers. Many of these projects raise millions of dollars via an ICO, and have a large budget for hiring skilled developers.
-You can take a quick look at [AngelList](https://angel.co/) and [apply for a position](https://angel.co/blockchains/jobs) that interests you.
+当然，您的项目必须具有某种价值才能筹集所需的资金。 
 
-![](https://i.imgur.com/EMG4E25.png)
+# 4. 在创业公司工作
 
-[https://angel.co/blockchains/jobs](https://angel.co/blockchains/jobs)
-Because blockchain developers are in such high demand, many of these offer working remotely, which is a big plus for many.
+如果建立自己创业公司的时机还不成熟，你可以受雇成为其他人所创立公司的一名开发人员。有很多新项目一直在寻找开发人员。这些项目中有许多通过ICO筹集了数百万美元，有一大笔预算去招聘有经验的开发人员。
+您可以在 [AngelList](https://angel.co/) 快速浏览一下并[申请](https://angel.co/blockchains/jobs)你所感兴趣的职位。
 
-If you prefer flexible and on-demand gigs, popular freelancing sites such as [upwork.com](http://upwork.com/) or [freelancer.com](http://freelancer.com/) have job listings on potential projects that you can work part-time or on a per-project basis.
+![](https://i.imgur.com/EMG4E25.png)[https://angel.co/blockchains/jobs](https://angel.co/blockchains/jobs)  
 
-You can search for positions such as *Solidity Developer* or *Blockchain Engineer* at these sites to grasp an idea of what positions are available.
+由于区块链开发人员的需求是如此之大，这些职位中很多都可以远程工作，这对于许多人来说是一大吸引力。
 
-Lots of big companies hire from time to time, trying to explore their own corporate solution.
+# 5. 作为一名自由职业者工作
 
-![](https://i.imgur.com/KdvIaRx.png)
+如果您更喜欢灵活的按需提供服务的工作方式，则 [upwork.com](http://upwork.com/) 或 [freelancer.com](http://freelancer.com/) 等热门自由职业者网站上会有可以兼职或按项目工作的潜在项目所需的工作列表。
 
-Visa job listing at LinkedIn
+您可以在这些网站上搜索 *Solidity Developer* 或 *Blockchain Engineer* 等职位名称以对这些职位的情况有所了解。
 
-> However, judging by [Visa asking for 8 years of Industry experience](https://www.indeed.com/m/viewjob?jk=b36f4dbb6b6140d5&amp;from=serp), then you’re either [Satoshi Nakamoto](https://en.wikipedia.org/wiki/Satoshi_Nakamoto) or drinking margaritas on your private island.  
+# 6. 加入一个大公司
 
-Usually these jobs are not oriented towards fully public and decentralized systems, so if you’re a blockchain purist, this may not be your cup of tea.
+许多大公司都在不间断的招聘开发人员来尝试扩充他们自己的企业解决方案。
 
-As more and more resources on learning to code these unstoppable applications become publicly available, aspiring developers will be able to transition smoothly from traditional development to blockchain development.
+![](https://i.imgur.com/KdvIaRx.png)Visa job listing at LinkedIn
+ 
+>然而，根据[Visa要求8年的行业经验](https://www.indeed.com/m/viewjob?jk=b36f4dbb6b6140d5&amp;from=serp)来判断，要么你是 [Satoshi Nakamoto](https://en.wikipedia.org/wiki/Satoshi_Nakamoto)，要么你已经可以在自己的私人岛屿上喝玛格丽特酒了。
 
-At Loom Network, we are contributing to this effort by building a community around tools and tutorials for learning to build DApps on Ethereum, the fastest-growing blockchain developer platform.
+通常这些工作不是面向完全公开和去中心化的系统，所以如果你是区块链纯粹主义者，这可能不是你的菜。
 
-**Here’s how we recommend you get started:**
+# 好吧，我被说服了。那么我该如何开始呢？
 
-1. Head to [CryptoZombies.io](http://cryptozombies.io/), our interactive code school that teaches you to write Ethereum DApps through building your own crypto-collectables game.
-2. Join our [Telegram community](http://t.me/loomnetwork) to join a thriving community of people talking about DApp development and scaling Ethereum.
-3. Check out our [Medium page](http://medium.com/loom-network) for our other articles on Solidity development.
+随着越来越多的关于编写这些不可停止应用程序的学习资源公开可见，有抱负的开发人员将能够顺利地从传统开发过渡到区块链开发。
 
-[Why you should learn to build Blockchain Apps](https://medium.com/loom-network/why-you-should-learn-to-build-blockchain-apps-be9a92e8d08e)
+对于Loom Network来说，我们通过围绕相关工具和教程构建社区来帮助实现这一目标，这些工具和教程用于学习在Ethereum这个发展最快的区块链开发平台上构建DApps。
+
+**下是我们建议您开始学习区块链开发的方式：**
+
+1. 前往 [CryptoZombies.io](http://cryptozombies.io/)，我们的互动代码学校，教你编写Ethereum DApps，通过构建你自己的加密可收集游戏。
+2. 加入我们的[电报社区](http://t.me/loomnetwork) ，加入到讨论DApp开发和缩放以太坊的人群中。
+3. 查看我们的[Medium page](http://medium.com/loom-network) 以获取关于Solidity开发的其他文章。
+
+----
+via: https://medium.com/loom-network/why-you-should-learn-to-build-blockchain-apps-be9a92e8d08e
+
+作者：[Georgios Konstantopoulos](https://medium.com/@gakonst)  
+译者：[Ashton](https://github.com/cdljsj)  
+校对：
+
