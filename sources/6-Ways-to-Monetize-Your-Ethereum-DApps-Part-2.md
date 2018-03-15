@@ -1,3 +1,5 @@
+Translating by [maojr](https://github.com/maojr)
+
 # 6 Ways to Monetize Your Ethereum DApps (Part 2)
 
 In [Part 1](https://medium.com/loom-network/6-ways-to-monetize-your-ethereum-dapps-part-1-28e9bb18f87e?source=user_profile---------4-------------------) of this 2-article series we had a theoretical approach towards monetizing your Ethereum DApps. In this part we will look at some code examples that show how you can actually implement them in Solidity.
