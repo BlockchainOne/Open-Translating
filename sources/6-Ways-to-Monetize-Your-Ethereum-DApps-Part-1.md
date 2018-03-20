@@ -1,4 +1,4 @@
-Translating by mtslicy@126.com
+Translating by Lucas mtslicy@126.com
 
 # 6 Ways to Monetize Your Ethereum DApps (Part 1)
 
