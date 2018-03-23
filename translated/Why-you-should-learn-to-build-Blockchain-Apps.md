@@ -21,6 +21,7 @@
 *App Store* 表现出类似的增长：
 
 ![](https://i.imgur.com/Wn46Rwb.png)
+
 App Store 在 2008-2017 期间的增长
 
 ## 历史会重演吗？
@@ -68,13 +69,14 @@ App Store 在 2008-2017 期间的增长
 所有你需要做的就是解决一个问题，然后如果悬赏提交者批准了你的方案，你将通过智能合约获取以以太币支付的报酬。
 
 ![](https://i.imgur.com/PLeqtRz.png)
+
 Gitcoin是如何工作的? | [https://gitcoin.co](https://gitcoin.co/)
 
 ### 3. 创建你自己的创业公司或加密货币
 
 感谢 [OpenZeppelin](https://blog.zeppelin.solutions/how-to-create-token-and-initial-coin-offering-contracts-using-truffle-openzeppelin-1b7a5dae99b6)，它使得发布一个安全可靠并可以用于价值交易的以太坊代币就像编写几行代码一样简单。在你完成代币的开发之后，就可以通过 ICO 来筹集资金了。
 
-下面是用来创建 GustavoCoin 的 10 行代码（来源：https://blog.zeppelin.solutions/how-to-create-token-and-initial-coin-offering-contracts-using-truffle-openzeppelin-1b7a5dae99b6）：
+下面是用来创建 GustavoCoin 的 10 行代码（来源：[https://blog.zeppelin.solutions/how-to-create-token-and-initial-coin-offering-contracts-using-truffle-openzeppelin-1b7a5dae99b6](https://blog.zeppelin.solutions/how-to-create-token-and-initial-coin-offering-contracts-using-truffle-openzeppelin-1b7a5dae99b6)）：
 
 ```
 pragma solidity 0.4.19;
@@ -95,7 +97,9 @@ contract GustavoCoin is MintableToken {
 如果建立自己创业公司的时机还不成熟，你可以受雇成为其他人所创立公司的一名开发人员。有很多新项目一直在寻找开发人员。这些项目中有许多通过ICO筹集了数百万美元，有一大笔预算去招聘有经验的开发人员。
 您可以在 [AngelList](https://angel.co/) 快速浏览一下并[申请](https://angel.co/blockchains/jobs)你所感兴趣的职位。
 
-![](https://i.imgur.com/EMG4E25.png)[https://angel.co/blockchains/jobs](https://angel.co/blockchains/jobs)
+![](https://i.imgur.com/EMG4E25.png)
+
+[https://angel.co/blockchains/jobs](https://angel.co/blockchains/jobs)
 
 由于区块链开发人员的需求是如此之大，这些职位中很多都可以远程工作，这对于许多人来说是一大吸引力。
 
@@ -110,6 +114,7 @@ contract GustavoCoin is MintableToken {
 许多大公司都在不间断的招聘开发人员来尝试扩充他们自己的企业解决方案。
 
 ![](https://i.imgur.com/KdvIaRx.png)
+
 Visa 在 LinkedIn 上公布的职位
 
 > 然而，根据 [Visa要求8年的行业经验](https://www.indeed.com/m/viewjob?jk=b36f4dbb6b6140d5&amp;from=serp) 来判断，要么你是 [Satoshi Nakamoto](https://en.wikipedia.org/wiki/Satoshi_Nakamoto)，要么你已经可以在自己的私人岛屿上喝玛格丽特酒了。
