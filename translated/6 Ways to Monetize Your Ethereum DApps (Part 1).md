@@ -26,8 +26,8 @@
 
 在这种情况下，你需要定义你的令牌 [ [1](https://medium.com/@mrdavey/good-discussion-and-question-2446e3827de2) ] 的需求：
 
-* 你的 dapp 的核心功能 ( [Golem](https://golem.network/), [Aragon](https://aragon.one/), [Request](https://request.network/) )
-* 提供你的网络的访问权 ( [BAT](https://basicattentiontoken.org/), [Bloom](https://hellobloom.io/) )
+* 你的 dapp 的核心功能 ( [Golem](https://golem.network/)，[Aragon](https://aragon.one/)，[Request](https://request.network/) )
+* 提供你的网络的访问权 ( [BAT](https://basicattentiontoken.org/)，[Bloom](https://hellobloom.io/) )
 * 将产品利润分配给代币持有者（TenX，Numerai）请注意，在这种情况下，你需要注意法规和 KYC 合规性，具体取决于你的代币是否被视为证券。
 
 Cryptokitties 从每次成功拍卖中收取 3.75％ 的费用。这被证明是一个 [非常有利可图的收入模式](https://medium.com/@codetractio/a-look-into-cryptokitties-revenue-model-6466b705a998)。
