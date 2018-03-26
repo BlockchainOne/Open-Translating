@@ -1,6 +1,5 @@
 # What is a Lightning Network?
 
-【FreddyHao 翻译中】
 Lightning Network is a blockchain-based payment protocol. With the protocol, instant transactions can be made by users. By design, Satoshi Nakamoto implemented a number of the building blocks needed to make transactions fast. Over time, developers have discussed the possibilities of bringing Satoshi’s idea to life. In 2015, two young developers (Joseph Poon and Thaddeus Dryja) enhanced Satoshi’s initial design by offering the idea of a decentralized network based on lightning-fast transactions.
 
 ![](https://i.imgur.com/hHtr4lP.jpg)
