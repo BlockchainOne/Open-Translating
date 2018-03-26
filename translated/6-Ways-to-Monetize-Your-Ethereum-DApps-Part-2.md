@@ -1,6 +1,7 @@
-# 让你的以太坊 DApps 盈利的6种方法（2）
+# 让你的以太坊 DApps 盈利的 6 种方法（2）
 
-在这两篇幅系列文章的[第一部分](https://medium.com/loom-network/6-ways-to-monetize-your-ethereum-dapps-part-1-28e9bb18f87e?source=user_profile---------4-------------------)
+在这两篇幅系列文章的 [第一部分](https://medium.com/loom-network/6-ways-to-monetize-your-ethereum-dapps-part-1-28e9bb18f87e?source=user_profile---------4-------------------)
+
 我们已经有了让你的以太坊 Dapps 盈利的理论方法。在这部分，我们将会看一些代码示例，向你展示如何用 Solidity 来真正实现它们。
 
 ## 提取资金
@@ -10,26 +11,30 @@
 
 这个函数将会转移调用合约的余额到 `owner` （使用最流行的 `onlyOwner` 修饰符 ）的地址。如果你不熟悉上面的关键字是如何工作的，你也许想要暂停阅读，在完成我们在 [CryptoZombies.io](https://cryptozombies.io/) 的课程之后再继续。
 
-** 声明：** 接下来所有的例子都已经被简化，仅用来展示如何实现所讨论的功能。我们对业务逻辑做出假设，并且当我们创建一组智能合约的时候，我们没有做任何严格的安全措施。在部署你的代码前，一定要对它们做一个全面的安全审核。
+**声明：** 接下来所有的例子都已经被简化，仅用来展示如何实现所讨论的功能。我们对业务逻辑做出假设，并且当我们创建一组智能合约的时候，我们没有做任何严格的安全措施。在部署你的代码前，一定要对它们做一个全面的安全审核。
 
-### 1.创建一个发售/发起一个Token
+### 1. 创建一个发售 / 发起一个 Token
+***
 
-这已经在[以太坊官方网站](https://ethereum.org/crowdsale)描述过。为了创建安全的发售，建议使用 Open Zeppelin 创建的 [audited contracts](https://github.com/OpenZeppelin/zeppelin-solidity/tree/master/contracts/crowdsale)。
+这已经在 [以太坊官方网站](https://ethereum.org/crowdsale) 描述过。为了创建安全的发售，建议使用 Open Zeppelin 创建的 [audited contracts](https://github.com/OpenZeppelin/zeppelin-solidity/tree/master/contracts/crowdsale)。
 
-你可以参考[这份指南](https://blog.zeppelin.solutions/how-to-create-token-and-initial-coin-offering-contracts-using-truffle-openzeppelin-1b7a5dae99b6), 或者[这个视频](https://www.youtube.com/watch?v=ShW2zQcY4LY)来实现。
+你可以参考 [这份指南](https://blog.zeppelin.solutions/how-to-create-token-and-initial-coin-offering-contracts-using-truffle-openzeppelin-1b7a5dae99b6)，或者 [这个视频](https://www.youtube.com/watch?v=ShW2zQcY4LY) 来实现。
 
-### 2.高级功能/跳过努力
+### 2. 高级功能 / 跳过努力
+***
+
 ![](https://i.imgur.com/SZ98sMV.png)
 
 在这里查看所有的代码: [https://ethfiddle.com/O3_2o-oqaZ](https://ethfiddle.com/O3_2o-oqaZ)
 
 在这个例子中，我们可以看到一个用户可以通过花费 `1ether` 绕过 `winCount` 的升级要求。然后，应用所有者可调用之前讨论过的 `withdraw` 函数，来得到了他们的资金。
 
-请注意，以太币的价格也许会在将来剧烈得升高（或降低），这将会改变使用你的高级特性的花费。所以在很多情况下，添加一个允许你在未来改变花费的`onlyOwner`函数是合理的，否则你的应用将可能变得非常昂贵。这适用于接下来所有的例子。
+请注意，以太币的价格也许会在将来剧烈得升高（或降低），这将会改变使用你的高级特性的花费。所以在很多情况下，添加一个允许你在未来改变花费的 `onlyOwner`函数是合理的，否则你的应用将可能变得非常昂贵。这适用于接下来所有的例子。
 
-### 3.收取一定比例的交易市场手续费
+### 3. 收取一定比例的交易市场手续费
+***
 
-在这个（非常简化）的例子中，当一个人想买一个僵尸的时候，价格的10%被发送到你的钱包，剩下的被转给到僵尸的拥有者。
+在这个（非常简化）的例子中，当一个人想买一个僵尸的时候，价格的 10% 被发送到你的钱包，剩下的被转给到僵尸的拥有者。
 
 ![](https://i.imgur.com/eTX2syY.png)
 
@@ -37,9 +42,9 @@
 
 为了节约一些费用，你可以跳过函数的第一行，这将会把以太币留在交易的余额里。通过使用我们之前描述的 `withdraw` 函数，你可以在后面的某个时间点提取合约上所有的以太币种。
 
-### 4.订阅/会员
+### 4. 订阅 / 会员
 
-这里，我们将会看到实现订阅/会员的商业逻辑的例子，主要有
+这里，我们将会看到实现订阅 / 会员的商业逻辑的例子，主要有
 
 1. 终生制
 2. 基于时间制
@@ -55,14 +60,14 @@
 
 在这里查看整个合约: [https://ethfiddle.com/LgzLNtIIVF](https://ethfiddle.com/LgzLNtIIVF)
 
-或者，相对于使用一个布尔值代表会员/非会员，我们可以使用一个 `uint8` 类型，设计不同的会员等级，拥有更多的特性：免费用户是等级0，等级1是银牌会员，等级2代表金牌会员等。
-比如`onlySilver()` 就能够检查会员等级是否 `>=1`。
+或者，相对于使用一个布尔值代表会员 / 非会员，我们可以使用一个 `uint8` 类型，设计不同的会员等级，拥有更多的特性：免费用户是等级 0，等级 1 是银牌会员，等级 2 代表金牌会员等。
+比如 `onlySilver()` 就能够检查会员等级是否 `>=1`。
 
 这很简单，让我们继续。
 
-#### 有时限的会员/订阅
+#### 有时限的会员 / 订阅
 
-在这里我们的商业模型将会假设订阅每天花费0.005以太币。
+在这里我们的商业模型将会假设订阅每天花费 0.005 以太币。
 
 ![](https://i.imgur.com/qtRpqHF.png)
 
@@ -71,11 +76,11 @@
 在这个例子中，当一个用户调用 `renewSubscription` 函数的时候，如必要的话 `subscriptionExpiration` 会被初始化为 `now`，并且会根据用户的付费增加一些天数。
 `onlyMember` 修饰语可以被用来检查当前的时间是否超过了会员有效期。
 
-#### 基于使用的会员/付费使用
+#### 基于使用的会员 / 付费使用
 
 这里的商业模型涉及到一个用户预先购买函数调用，有点类似于你用设定好的价格购买 API 调用。
 
-在这个例子中，用户每个以太币可以购买1000次调用。用户每次调用有`onlyIfEnoughCalls`修饰符的函数，在检查符合调用条件后，`availableCalls` 变量会减少。
+在这个例子中，用户每个以太币可以购买 1000 次调用。用户每次调用有`onlyIfEnoughCalls`修饰符的函数，在检查符合调用条件后，`availableCalls` 变量会减少。
 
 ![](https://i.imgur.com/G8F9V8K.png)
 
