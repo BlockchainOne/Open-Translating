@@ -256,7 +256,7 @@ func handleConn(conn net.Conn) {
     }
 
 }
-``
+```
 
 The first Go routine receives and prints out any announcements that come from the TCP server. These announcements will be who the winning validator is when one is chosen.
 
