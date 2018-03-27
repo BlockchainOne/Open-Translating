@@ -1,0 +1,61 @@
+# Secure Cryptocurrency Seeds
+
+When working with cryptocurrencies, you will eventually hear about something called “seeds” or “private keys”. What are they and why are they important? Why do I need one? What makes one seed more or less safe than another? As a hodler, all of these questions are of utmost importance.
+
+A seed is like a username-password combo used to access your funds within cryptocurrency wallets. Each seed should be unique and very difficult to guess or brute-force. If someone happens to generate the same seed as you, they may gain access to your funds as well. And seeds are quite short, typically 64 characters long. These seeds are used to generate the keys used to sign transactions and generate the public addresses where the funds are stored.
+
+You may be worried that bad actors could spin up a bunch of computers and start generating vast numbers of seeds to get access to your funds. But, when you consider this mathematically and physically, it is nearly impossible with today’s technology with even a large amount of time and resources.
+
+Try counting to 10… that probably didn’t take very long. Now try counting to 100… That takes a bit of time; roughly 10 times as much time as counting to 10. Now count to 100,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000. That is about the possible number of unique 64 character cryptocurrency seeds consisting of 0–9 and A-F. Most cryptocurrencies utilize 256 bits as their seed, which equates to 2²⁵⁶ (or about 116e75 or 116 [quattuorvigintillion](https://en.wikipedia.org/wiki/Names_of_large_numbers) ) possible seeds (although this whole range may not be valid in some cryptocurrencies). Add a few more bits and that is enough seeds to assign to every atom in the observable universe. ( [Some have estimated roughly 10e80 atoms in the observable universe](https://educationblog.oup.com/secondary/maths/numbers-of-atoms-in-the-universe).)
+
+Let’s say my computer can count to a billion in one second. ( [This is roughly the typical counting speed of today’s hardware.](https://computers-are-fast.github.io/) ) So, if I wanted to enumerate all possible Bitcoin seeds, I would need 1.16e68 seconds, or about 3.66e60 years (3.66 [novemdecillion](https://en.wikipedia.org/wiki/Names_of_large_numbers) years). That is about 2.69e50 times longer than the age of the known universe! Let’s say we used a billion of these computers in parallel. We would still wait 2.69e41 times the age of the universe! On top of that, enumerating seeds isn’t enough. You still need to generate an address from the seed and query the blockchain every time you generate a seed to see if it even has any funds. This adds even more time to the equation!
+
+The odd of finding any seed are slightly better, if we consider that there are probably millions if not billions of seeds that are in use. But again, this only helps us a certain order of magnitude. Let’s say we will need 1 trillion seeds to satisfy all people and IOT devices in the future. Your odds of randomly finding a seed that is in use is 1e12 / 116e75 = 8.62e-64 %, which is ridiculously minuscule.
+
+As we can see, if you have a perfectly random seed, it would be very difficult for a malicious party to obtain your funds. The problem then becomes, how does one create a perfectly random seed?
+
+There is such a thing as an unsafe random number. If you have a pseudo-random source of numbers, it is possible to find a pattern in the randomness. There was an attack on IOTA seeds some months back when users tried to generate their own seeds. People were posting, whether by malicious intent or simple ignorance, insecure methods of generating IOTA seeds. The main one in question was a PowerShell seed generator. PowerShell is a terminal program on Windows machines that allows you to interact with the computer in a command-driven manner. One would copy and paste these one-line seed generating commands into PowerShell and it would spit out a seemingly random string of characters that make up an IOTA seed. The problem was that this PowerShell command used a pseudo-random number generator; not a fully blown cryptographic random number generator. In this case, the command that people were posting everywhere online could only generate a total of about 2 billion unique seeds. 2 billion is well within the range of seeds that an attacker could search and detect whenever funds were transferred. Eventually people figured this out and there was [a reddit post about the matter highlighting these issues](https://www.reddit.com/r/Iota/comments/6v9mj6/psa_nearly_all_powershell_generated_seeds_are/). But not before funds were lost to groups of anonymous hackers.
+
+Real money was lost because people didn’t understand the importance of cryptographic random number generators. A cryptographic random number generator has certain properties that make it well suited against these kinds of attacks. The most important property one wants is uniform randomness, that is, you want the exact same chance of generating any seed as any other. Otherwise, there is bias, and this bias can make guessing the random number easier. Another property is that of random sequences. This was the main problem with the PowerShell command mentioned earlier: it could only generate 2 billion unique sequences of random numbers, and hence, could only generate 2 billion unique seeds. The reason it could only generate 2 billion unique sequences is because it is a [pseudo-random number generator](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) (PRNG). While being vastly easier to implement in computer code, PRNGs are not sufficiently random for these financially significant use cases.
+
+It is a sad tale in cryptography and cryptocurrency for all of those funds to have been stolen. I partly blame the IOTA foundation for putting the onus on the users to properly generate cryptographically random seeds. Just about every other crypto wallet in existence has methods of secure seed generation in the app itself. But the IOTA foundation chose to force the users to figure it out for themselves. Until they fix this, we must continue to handle this ourselves or wait for the upcoming [IOTA wallet from UCL](https://blog.iota.org/trinity-wallet-march-update-40dcb720976f) that should improve on this shortcoming.
+
+The IOTA wallet used to have a seed generator, but it was removed. I did some digging and found out that their generator contained a flaw: it was biased. They used the [modulus operator](https://en.wikipedia.org/wiki/Modulo_operation) on a cryptographically random number which makes the result deviate from the desirable uniform randomness. I don’t think they ever announced their mistake, but rather quietly removed it with the commit message, “ [Remove unused functionality.](https://github.com/iotaledger/wallet/commit/8dd25c73ebec479da82ccc6785c99f9c9721a595#diff-811c3396b5482f22ef2497b59f58579cL23) ”
+
+It’s actually not too difficult to implement a secure seed generator in JavaScript. Later in this article, I explain how my project, [Secure Seed Commands](https://github.com/pRizz/SecureSeedCommands), contains secure seed generating commands for IOTA that could be implemented in the wallet and/or used for cold storage.
+
+But we can learn something here. How bad was this mistake? Are old wallets at risk of being hacked? This part gets a bit math and computer science heavy.
+
+Seeds in IOTA require 81 characters, or “ [trytes](https://docs.iota.org/introduction/other-stuff/glossary) ”, consisting of the letters A to Z and the number 9. (This is due to their reliance on trinary math.) They generated 81 cryptographically random, unsigned, 32-bit integers and modded them by 27 so that these numbers could be mapped to the trytes. An unsigned 32-bit integer goes from 0 to 4,294,967,295. As long as the random number falls in the range of 0 to 4,294,967,273, we are ok, because modding this by 27 will produce a uniformly random number.
+
+Even with this bias, the odds that their generator produced a good, non-biased seed are actually quite good, funny enough: (4,294,967,273 good possibilities/4,294,967,295 possibilities)⁸¹ = 99.999958509%. Put another way, the odds that you got a biased seed are 1 in about 2.4 million. And that probably means only a single letter had a different chance of being picked. It is much more unlikely for two or more letters to also have had this bias.
+
+With the bias, the odds of generating the letter 9 or any letter between A and U are 159,072,863 / 4,294,967,295 or ~ 3.703703708%, whereas the odds of getting any letter between V and Z are slightly less: 159,072,862 / 4,294,967,295 or ~ 3.703703685%. That’s a difference of only ~0.000000023%.
+
+With this information, I believe it is unlikely for an attacker to brute force a biased seed.
+
+There was a big problem for IOTA recently about users’ funds being “stolen” from their wallets due to unsafe, online seed generation. [Here is an article](https://dowbit.com/4-mln-worth-of-iota-stolen-from-wallets/) with more details about how it was done. In this case, users generated their seeds on a website that essentially sent these seeds back to the scammer’s server, where they eventually used them to log into the users’ wallets and withdraw their funds. This is a classic case of a phishing website: you think it’s trustworthy, but it turns out to be malicious. Also, these seeds were produced in the browser, which could let malicious browser extensions silently read the seeds that are generated.
+
+I created a website to be a reference for creating cryptocurrency seeds securely, not just for IOTA but also a few other popular cryptocurrencies. This is useful when you want full control over the seed generation process and want to securely generate seeds independently of wallet software. These commands may be executed on a number of different platforms securely, namely: Windows, Mac, Linux, JavaScript in NodeJS and on Web, Ruby, and Python 3.
+
+![](https://i.imgur.com/qOJg5vV.png)
+Crypto seed generators for IOTA
+
+Here is a link to the IOTA seed generating commands: [https://www.secureseedcommands.com/#/IOTA](https://www.secureseedcommands.com/#/IOTA).
+
+**No seeds are generated on my website. It is only a reference of commands with explanations used to create them.** All commands on this website utilize the proper cryptographically secure random number generators on each platform.
+
+I do still have a disclaimer when reaching the website, saying that the code, which is [open source](https://github.com/pRizz/SecureSeedCommands), is still in beta and has not been formally audited by third parties. I want to reach out and ask the community for your feedback so that we can gain some confidence in the trustworthiness of the project and seed generating commands.
+
+I will repeat some best practices listed at the bottom of the website here:
+
+* Disable your internet while generating seeds.
+* Always clear or overwrite your clipboard after pasting your seed. Malicious websites and applications can silently read your clipboard.
+* Generate multiple seeds and splice them together randomly. This can mitigate key logging / terminal history attacks and give you a sense of greater control. Ensure you have the proper number of characters.
+* Encrypt your seeds. Example password encryption with gpg: `gpg --symmetric seeds.txt` and decryption: `gpg seeds.gpg`
+* Study the above commands and their explanations so that you could put them in manually.
+Be wary of copycats and mirror websites, as they may have malicious modifications to the seed generating commands. You can also download the code and run it yourself if you install NodeJS and run the command `npm install; npm run dev` in the directory.
+
+I also encourage the IOTA team to take a look at my seed generating commands and consider adding them to the current wallet, so that users can have a simpler and more secure way of generating their seeds.
+
+[Secure Cryptocurrency Seeds](https://medium.com/@peterryszkiewicz/secure-cryptocurrency-seeds-fdd99f39df7e)
