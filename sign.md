@@ -1,13 +1,12 @@
 
 ---
 
-via：来源链接
+本文由 [ChainONE](https://chainone.xyz) 团队荣誉推出。
 
-* 作者：`[作者名][a]`
-* 译者：`[译者ID](https://github.com/译者ID)`
-* 校对：`[校对者ID](https://github.com/校对者ID)`
-
-本文由 [BlockchainOne](https://github.com/BlockchainOne/Open-Translating) 原创编译，[Chain One Community](https://bcage.one) 荣誉推出。
+> via：来源链接
+> 作者：`[作者名][a]`
+> 译者：`[译者ID](https://github.com/译者ID)`
+> 校对：`[校对者ID](https://github.com/校对者ID)`
 
 [a]:作者链接
 [1]:文内链接
