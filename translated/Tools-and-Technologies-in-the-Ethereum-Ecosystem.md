@@ -1,4 +1,3 @@
-# Tools and Technologies in the Ethereum Ecosystem
 # 以太坊生态中的工具与技术
 
 ![](https://i.imgur.com/Jjkpwfr.png)
