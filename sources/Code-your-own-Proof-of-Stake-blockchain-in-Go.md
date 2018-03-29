@@ -1,5 +1,6 @@
 # Code your own Proof of Stake blockchain in Go!
 
+[FreddyHao 翻译中]
 ![](https://i.imgur.com/LjKGMrb.png)
 
 *Questions about the following tutorial? Why wait? Join us in our* [Telegram](https://t.me/joinchat/FX6A7UThIZ1WOUNirDS_Ew) *chat!*
