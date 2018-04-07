@@ -2,62 +2,37 @@
 
 ![](https://i.imgur.com/zCSz3H0.png)
 
-[Source](https://scalingbitcoin.org/) 
-
-A familiar critique of Bitcoin is that “it does not scale” in the sense that, as it is currently implemented, the network is not capable of supporting a global payments system that requires many thousands of transactions per second. At the moment, this is true; Bitcoin can support [up to 7 transactions per second](https://link.springer.com/chapter/10.1007%2F978-3-662-53357-4_8) as compared to the 2,000 transactions per second typically processed by Visa (with [the potential to scale to an estimated 56,000 per second](https://usa.visa.com/dam/VCOM/download/corporate/media/visa-fact-sheet-Jun2015.pdf) ).  
-
 针对比特币一个常见的批评是“它不能扩容”，根据当前的实现，比特币网络没有能力支撑一个需要每秒达数千笔交易的全球性支付系统。就目前来说，这确实是事实。比特币所能支持的[交易上限是每秒7笔]((https://link.springer.com/chapter/10.1007%2F978-3-662-53357-4_8))，而通常来说 Visa 每秒可处理 2000 笔交易（甚至可以达到[每秒约 56000 笔](https://usa.visa.com/dam/VCOM/download/corporate/media/visa-fact-sheet-Jun2015.pdf)）。
 
-
-**This critique is incomplete, however, because it does not address whether Bitcoin *has the potential to scale.* The more interesting questions to ask are:**  
 **然而，这种批评是有失偏颇的，它并没有说明比特币是否*有扩容的潜力*。更有趣的问题是：**
 
-
-* Is it possible for Bitcoin to scale to process more than 7 transactions per second?
 * 比特币是否有能力每秒处理 7 笔以上交易？
-* If Bitcoin can scale to support more transactions per second, how?
 * 如果说比特币可以通过扩容支持每秒更多的交易，该怎么做？
-* If there is more than one viable solution, which is the best one?
 * 如果有不止一个可行方案，哪一个是最好的？  
-The Bitcoin scaling debate has been going on almost as long as the cryptocurrency itself has existed. This piece will provide context for the Bitcoin scaling debate, then review the proposed solutions and look to the future to determine if Bitcoin can scale to process thousands of transactions a second and, if so, how.  
 
 针对比特币扩容的争论几乎是从加密货币开始出现就一直在持续。本文会提供比特币扩容争议的背景，回顾所提出的解决方案，并放眼未来以确定比特币是否可以通过扩容达到每秒处理数千笔交易，如果可以，需要怎么做。
-
-It is also important to keep perspective and recognize that Bitcoin can still be highly valuable even if it is unable to process thousands of transactions a second. Arguably, Bitcoin has already proved significant value by demonstrating over almost a decade to be resilient to attacks.  
+ 
 保持灼见并认识到即使不能每秒钟处理成千上万笔交易，比特币仍然是有很高价值这点儿也是很重要的。可以说，比特币已经通过近 10 年免受攻击的运行证明了它的非凡价值。
 
-Over the years, many different proposals have been presented as solutions to increase Bitcoin’s limited transaction rate. One of the most popular and persistent proposals has been for an increase in the block size used by Bitcoin, which is currently 1MB. Transactions are grouped together into a block and validated by nodes on the network, which means that a larger block size allows for more transactions to be batched and processed per block (each block is registered [roughly every 10 minutes](https://coincenter.org/entry/how-long-does-it-take-for-a-bitcoin-transaction-to-be-confirmed) ). Historically, Bitcoin’s block size was set at 1MB as a means of limiting spam transactions and DDoS attacks (though there is no conclusive statement on this; [it has been reported that Satoshi incorporated a 1MB block size into the codebase without notice then later provided these reasons when questioned](https://en.bitcoin.it/wiki/Block_size_limit_controversy) about the decision). Changing the block size, however, has long been controversial as a larger block size also reduces the number of miners who can successfully compete to validate transactions. As explained by [BitcoinWiki](http://therefore/,%20larger%20blocks%20lead%20to%20less%20hashers%20running%20full%20nodes,%20which%20leads%20to%20centralized%20entities%20having%20more%20power,%20which%20makes%20Bitcoin%20require%20more%20trust,%20which%20weakens%20Bitcoins%20value%20proposition.), “Larger blocks make full nodes more expensive to operate. Therefore, larger blocks lead to less hashers running full nodes, which leads to centralized entities having more power, which makes Bitcoin require more trust, which weakens Bitcoins value proposition.” For this reason, some in the community are concerned that increasing the block size of Bitcoin would put the decentralized nature of the network at risk.  
-
+## 背景
 多年来，有很多不同的建议被提出作为提高比特币有限的交易速率的方案。其中一个最为流行和持久的提议就是增加比特币区块大小，比特币当前区块大小是 1M。若干交易被组合到一起放到区块里，然后被网络节点所验证，这意味着一个更大的区块可以打包并处理更多的交易（大约[每 10 分钟](https://coincenter.org/entry/how-long-does-it-take-for-a-bitcoin-transaction-to-be-confirmed)登记一个区块）。从历史上来讲，比特币区块大小被设置为 1MB 主要是用来作为限制垃圾交易和 DDos 攻击的一种方式（尽管在这点儿上并没有明确的说法，[曾有报道称中本聪在未发布任何通知的情况下将 1M 区块大小的限制引入代码库并随后在被问及此事时提供了做这个决定的原因](https://en.bitcoin.it/wiki/Block_size_limit_controversy))。然而，改变区块大小长期以来时富有争议的，因为更大的区块会减少能够成功通过竞争去验证交易的矿工数量。正如 [BitcoinWiki](http://therefore/,%20larger%20blocks%20lead%20to%20less%20hashers%20running%20full%20nodes,%20which%20leads%20to%20centralized%20entities%20having%20more%20power,%20which%20makes%20Bitcoin%20require%20more%20trust,%20which%20weakens%20Bitcoins%20value%20proposition.) 所解释的那样，“更大的区块会使全节点的运营成本更高。这样一来，更大的区块导致更少人去运行全结点，继而导致中心化实体拥有更多算力，这会让比特币的运行依赖更多的信任，从而消弱比特币的价值主张。” 出于这个原因，一些社区成员担心增加比特币区块大小会让网络的去中心化属性受到威胁。  
-
-More recently, Bitcoin soft forked ( [here is an explanation of cryptocurrency forks](https://hackernoon.com/an-explanation-of-cryptocurrency-forks-65d79efe214c) ) to incorporate Segregated Witness (SegWit), which Wikipedia explains as, “an update aimed at solving [transaction malleability](https://en.wikipedia.org/w/index.php?title=Transaction_malleability&amp;action=edit&amp;redlink=1), a known weakness in bitcoin’s security. Segregated Witness is a system by which the signature data is segregated from other transaction data. Segregated Witness has been proposed as a solution for scaling, and has impacts in two ways. It changes how data is stored in each bitcoin block. SegWit provides a boost in transaction capacity while remaining compatible with earlier versions of bitcoin software. It fixes transaction malleability that has been a roadblock for other bitcoin projects. SegWit allows for an easier implementation of the [Lightning Network](https://en.wikipedia.org/wiki/Lightning_Network).”  
-最近，比特币通过软分叉（[这里有对加密货币软分叉的解释](https://hackernoon.com/an-explanation-of-cryptocurrency-forks-65d79efe214c)）引入了隔离见证，如维基百科所述，“这次更新旨在解决[交易延展性](https://en.wikipedia.org/w/index.php?title=Transaction_malleability&amp;action=edit&amp;redlink=1)这么一个在比特币安全方面的已知缺陷。隔离见证是一种将签名数据从交易数据中隔离出来的机制。隔离见证作为一种扩容方案，在两个方面会对比特币产生影响。它改变了数据在每个比特币区块上的存储方式。SegWit 在保持与早期版本比特币软件兼容的情况下提升了交易容量。它修复了交易延展性这个其它比特币项目的绊脚石。SegWit 允许一种更简单的方式去实现[闪电网络](https://en.wikipedia.org/wiki/Lightning_Network)。”
-
-This ongoing debate led to a hard fork of Bitcoin in August 2017 and the creation of Bitcoin Cash, which replicates the original Bitcoin protocol but increase block sizes to 8MB (find more on the differences [here](https://www.investopedia.com/tech/bitcoin-vs-bitcoin-cash-whats-difference/) ).
+ 
+最近，比特币通过软分叉（[这里有对加密货币软分叉的解释](https://hackernoon.com/an-explanation-of-cryptocurrency-forks-65d79efe214c)）引入了隔离见证 (SegWit)，如维基百科所述，“这次更新旨在解决[交易延展性](https://en.wikipedia.org/w/index.php?title=Transaction_malleability&amp;action=edit&amp;redlink=1)这么一个在比特币安全方面的已知缺陷。隔离见证是一种将签名数据从交易数据中隔离出来的机制。隔离见证作为一种扩容方案，在两个方面会对比特币产生影响，一个是它改变了数据在每个比特币区块上的存储方式，另一个是 SegWit 在保持与早期版本比特币软件兼容的情况下提升了交易容量。它修复了交易延展性这个其它比特币项目的绊脚石。SegWit 允许一种更简单的方式去实现[闪电网络](https://en.wikipedia.org/wiki/Lightning_Network)。”
 
 这个持续的争论导致了 2017 年 8 月的一次比特币硬分叉和比特币现金的创立，比特币现金原封不动的复制了比特币协议，只是将区块大小增加到了 8MB（[这里](https://www.investopedia.com/tech/bitcoin-vs-bitcoin-cash-whats-difference/)可以查看比特币与比特现金更多的不同）。
 
-As described above, Segregated Witness (SegWit) was implemented as a soft fork to Bitcoin in July 2017, which doubled the amount of information stored in each block. Perhaps more importantly for Bitcoin’s long term scaling potential, SegWit also enables second-layer transaction networks like Lightning Network. As described in the Lightning Network white paper, “The Lightning Network is a decentralized system for instant, high-volume micropayments that removes the risk of delegating custody of funds to trusted third parties. … Micropayments, or payments less than a few cents, are inconsistently confirmed, and fees render such transactions unviable on the network today. The Lightning Network solves these problems. It is one of the first implementations of a multi-party Smart Contract (programmable money) using bitcoin’s built-in scripting. The Lightning Network is leading technological development in multiparty financial computations with bitcoin.” Lightning Network introduces a solution to Bitcoin’s scaling problem by enabling transactions to take place “off chain” which removes burden from the network. As the white paper continues, it is implemented as follows, “Funds are placed into a two-party, multisignature “channel” bitcoin address. This channel is represented as an entry on the bitcoin public ledger. In order to spend funds from the channel, both parties must agree on the new balance. The current balance is stored as the most recent transaction signed by both parties, spending from the channel address. To make a payment, both parties sign a new exit transaction spending from the channel address. All old exit transactions are invalidated by doing so. The Lightning Network does not require cooperation from the counter party to exit the channel. Both parties have the option to unilaterally close the channel, ending their relationship. Since all parties have multiple multi-signature channels with many different users on this network, one can send a payment to any other party across this network.” Lightning Network essentially brings a smart contract-like capability to Bitcoin transactions in a way that allows transactions to take place off chain.  
+## 方案
+### 隔离见证/闪电网络
+如上所述, 在 2017 年 7 月, 比特币通过软分叉实现了隔离见证 (SegWit) , 这使得每个区块中存储的信息量增加了一倍。 对于比特币的长期扩容潜力来说, 或许更重要的是, SegWit 还支持像闪电网络这样的第二层交易网络。 正如"闪电网络"白皮书所述, "闪电网络是一个用于即时、大量的小额支付的去中心化系统, 消除了将资金托管给可信任的第三方的风险。... 小额支付, 或者那些少于几美分的付款, 并没有得到一致的确认, 而且费用问题也使得这些交易在今天的比特币网络上不可行。 闪电网络解决了这些问题。 它是使用比特币内置脚本构造多方智能合约 (可编程货币) 的首批实现者之一。 闪电网络正在引领比特币多方金融计算的技术发展。" 闪电网络引入了一种使交易在”链下“进行来消除比特币网络负担的方法，去解决比特币扩容问题。 正如白皮书接下来所述, 它是通过下面的方式来实现的: "资金被放入一个双方多签名的比特币“通道”地址。 这个通道是比特币公共账本中的一个条目。 为了花费通道中的资金, 双方必须就新的余额达成一致。 当前的余额是作为通过通道地址花费并被存储为双方最近签署的交易来存储的。 为了创建一个交易, 双方需要签署一个支出来自通道地址的新的退出交易。 所有旧的退出交易通过这样做后都会失效。 闪电网络不要求双方合作去退出该通道。 双方都可以选择单方面关闭通道, 结束他们的关系。 由于所有各方都有多个多重签名的通道, 在这个网络上有许多不同的用户, 人们可以通过这个网络向其他任何一方发送付款。" 闪电网络在比特币交易中带来了一种类似智能合约的能力, 使得交易可以再链下进行。
 
-如上所述, 在2017年7月, 比特币通过软分叉实现了隔离见证 (SegWit) , 这使得每个区块中存储的信息量增加了一倍。 对于比特币的长期扩容潜力来说, 或许更重要的是, SegWit 还支持像闪电网络这样的第二层交易网络。 正如"闪电网络"白皮书所述, "闪电网络是一个用于即时、大量的小额支付的去中心化系统, 消除了将资金托管给可信任的第三方的风险。... 小额支付, 或者那些少于几美分的付款, 并没有得到一致的确认, 而且费用问题也使得这些交易在今天的比特币网络上不可行。 闪电网络解决了这些问题。 它是使用比特币内置脚本构造多方智能合约 (可编程货币) 的首批实现者之一。 闪电网络正在引领比特币多方金融计算的技术发展。" 闪电网络引入了一种使交易在”链下“进行来消除比特币网络负担的方法，去解决比特币扩容问题。 正如白皮书接下来所述, 它是通过下面的方式来实现的: "资金被放入一个双方多签名的比特币“通道”地址。 这个通道是比特币公共账本中的一个条目。 为了花费通道中的资金, 双方必须就新的余额达成一致。 当前的余额是作为通过通道地址花费并被存储为双方最近签署的交易来存储的。 为了创建一个交易, 双方需要签署一个支出来自通道地址的新的退出交易。 所有旧的退出交易通过这样做后都会失效。 闪电网络不要求双方合作去退出该通道。 双方都可以选择单方面关闭通道, 结束他们的关系。 由于所有各方都有多个多重签名的通道, 在这个网络上有许多不同的用户, 人们可以通过这个网络向其他任何一方发送付款。" 闪电网络在比特币交易中带来了一种类似智能合约的能力, 使得交易可以再链下进行。
+闪电网络仍处于早期开发阶段, 但在潜在减少比特币网络所面临的交易负载方面已经显示出了希望。 闪电网络还介绍了其他第二层离链方法的技术, 如等离子体的空间。 这些第二层网络显示了比特币交易率扩大的最具体进展。
 
+### 增大区块
+不可避免的是, 正如过去几年一样, 增加区块大小将作为一种解决方案重新提出。 有关增加区块大小会带来多大程度失去去中心化风险的争论仍会继续。然而, 关于增加所使用区块大小的实践性方面, 有一个重要的注意事项是, 增加区块大小只能线性提高每秒的事务量。 将比特币的块大小增加到 8MB (正如比特币现金所做的那样) 只能在理论上达到的每秒 56 笔交易（7 / txs * 8x 的区块大小增加） , 而像 Visa 这样的全球支付网络通常每秒能处理 2000 个交易。 因此, 这意味着增加区块大小似乎只能作为这个结构性问题的短期解决方案, 这个问题可以通过第二层网络这样的解决方案得到更好的解决。
 
-Lightning is still at an early development stage but has shown promise in potentially reducing the transaction load faced by the Bitcoin network. Lightning Network also introduces the technology for other second-layer off-chain approaches, like Plasma for Ethereum. These second-layer networks show the most concrete progress towards scaling Bitcoin’s transaction rate.
-
-闪电仍处于早期开发阶段, 但在潜在减少比特币网络所面临的交易负载方面已经显示出了希望。 闪电网络还介绍了其他第二层离链方法的技术, 如等离子体的空间。 这些第二层网络显示了比特币交易率扩大的最具体进展。
-
-Inevitably, increasing the block size will be reintroduced as a solution just as it has for the past few years. The debate will continue about just how much risk increasing block size creates for a potential loss of decentralization. One important note, however, about the practicality of increasing the block size used is that increasing the block size only improves transactions per second linearly. Increasing Bitcoin’s block size to 8MB (as Bitcoin Cash has done) would only enable a theoretical 56 transactions per second (7/txs * 8x increase in block size) while global payment networks like Visa regularly process 2,000 transactions a second. This means, then, that increasing block size appears to be a near term solution to a larger structural problem that might better be addressed by solutions like a second-layer network.
-
-不可避免的是, 正如过去几年一样, 增加区块大小将作为一种解决方案重新提出。 有关增加区块大小会带来多大程度失去去中心化风险的争论仍会继续。然而, 关于增加所使用区块大小的实践性方面, 有一个重要的注意事项是, 增加区块大小只能线性提高每秒的事务量。 将比特币的块大小增加到 8MB (正如比特币现金所做的那样) 只能在理论上达到的每秒 56 笔交易(7 / txs * 8x 的区块大小增加) , 而像 Visa 这样的全球支付网络通常每秒能处理 2000 个交易。 因此, 这意味着增加区块大小似乎只能作为这个结构性问题的短期解决方案, 这个问题可以通过第二层网络这样的解决方案得到更好的解决。
-
-It is too early to tell if Bitcoin will be able to scale to accommodate thousands of transactions a second or if the community even collectively agrees it should. If it does end up scaling, it will be fascinating to see if the changes required come from modifications of the underlying blockchain or if they come from solutions “up the stack”, like second-layer networks, that maintain the traditional Bitcoin blockchain layer but build on top of it. History suggests that Bitcoin developers strongly prefer maintaining the current block size and protocol and would much rather see adaptations built on top to accommodate transaction volume. Additionally, new developments like SegWit may enable solutions that cannot be anticipated.
-
+## 未来
 现在判断比特币是否能够容纳每秒钟数千笔交易或者说社区是否会一致认为应该这样做还为时尚早。 如果最终需要扩容, 不管所需要的改变是来自对底层区块链的修改，还是来自那些“栈上”方案，像第二层网络那样维护一个传统比特币区块链并构建在其之上，都是令人着迷的。历史表明, 比特币开发者强烈希望维持当前的块大小和协议, 并且更愿意看到构建在其之上适应相应交易量的适配性方案。 此外，像 SegWit 这样的新开发项目可能会带来无法预料的解决方案。
 
-**I’m trying something new:** if you’d like to chat about cryptocurrencies or anything else technology related drop me a line at philjglazer@gmail.com.
-
-**Note: I do not and will not provided investment advice or recommendation.**
-
-![](https://i.imgur.com/qcnJnaU.png)
-
-[The Bitcoin Scaling Debate: Context, Proposed Solutions, and the Future](https://hackernoon.com/the-bitcoin-scaling-debate-context-proposed-solutions-and-the-future-579f9373e24b)
+via: [https://hackernoon.com/the-bitcoin-scaling-debate-context-proposed-solutions-and-the-future-579f9373e24b](https://hackernoon.com/the-bitcoin-scaling-debate-context-proposed-solutions-and-the-future-579f9373e24b)。  
+作者：[Phil Glazer](https://hackernoon.com/@philglazer).   
+译者：[Ashton](https://github.com/cdljsj)
