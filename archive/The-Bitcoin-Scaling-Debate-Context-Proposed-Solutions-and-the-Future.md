@@ -2,7 +2,7 @@
 
 ![](https://i.imgur.com/zCSz3H0.png)
 
-[Source](https://scalingbitcoin.org/)
+[Source](https://scalingbitcoin.org/) 
 
 A familiar critique of Bitcoin is that “it does not scale” in the sense that, as it is currently implemented, the network is not capable of supporting a global payments system that requires many thousands of transactions per second. At the moment, this is true; Bitcoin can support [up to 7 transactions per second](https://link.springer.com/chapter/10.1007%2F978-3-662-53357-4_8) as compared to the 2,000 transactions per second typically processed by Visa (with [the potential to scale to an estimated 56,000 per second](https://usa.visa.com/dam/VCOM/download/corporate/media/visa-fact-sheet-Jun2015.pdf) ).
 
