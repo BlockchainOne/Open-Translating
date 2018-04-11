@@ -50,14 +50,14 @@ Parity，用 Rust 语言编写，是另一个对以太坊协议很好的实现�
 ## 5. [Solidity](https://solidity.readthedocs.io/en/develop/)
 ***
 
-Solidity 是用于编写在以太坊区块链上运行的智能合约最流行的编程语言。它是一种编译时转换为 EVM （以太坊虚拟机）字节码的高级语言。 这与具有诸如 Scala，Groovy，Clojure，JRuby 等 JVM 语言的 java 世界非常相似。所有这些 JVM 语言都可以在编译时生成可在 JVM（Java虚拟机）中运行的字节码。 只要遵循规范，你也可以创建一个像 Solidity 这样的语言，编译时转换为有效的 EVM 字节码！
+Solidity 是用于编写在以太坊区块链上运行的智能合约最流行的编程语言。它是一种编译时转换为 EVM （以太坊虚拟机）字节码的高级语言。这与具有诸如 Scala，Groovy，Clojure，JRuby 等 JVM 语言的 java 世界非常相似。所有这些 JVM 语言都可以在编译时生成可在 JVM（Java虚拟机）中运行的字节码。 只要遵循规范，你也可以创建一个像 Solidity 这样的语言，编译时转换为有效的 EVM 字节码！
 
 还有一个非常棒的基于浏览器的 IDE，在这里你可以编写智能合约并将其编译部署到区块链上: [http://remix.ethereum.org/](http://remix.ethereum.org/)。
 
 ## 6. [Truffle](http://truffleframework.com/)/[Embark](https://github.com/iurimatias/embark-framework)
 ***
 
-就像你有 Ruby on Rails，Python / Django 等 web 框架去做应用程序开发一样，Truffle 和 Embark 是用于开发以太坊去中心化应用（dapps）的两个最流行的框架。 它们将在区块链上编译和部署合约的许多复杂的东西都抽象化了。
+就像你有 Ruby on Rails，Python / Django 等 web 框架去做应用程序开发一样，Truffle 和 Embark 是用于开发以太坊去中心化应用（dapps）的两个最流行的框架。它们将在区块链上编译和部署合约的许多复杂的东西都抽象化了。
 
 如果你是个以太坊去中心化应用（dapp）开发新手，在[这里](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-1-40d2d0d807c2)，[这里](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-2-30b3d335aa1f)还有[这里](https://medium.com/@mvmurthy/full-stack-hello-world-voting-ethereum-dapp-tutorial-part-3-331c2712c9df)我已经为你写了一系列入门教程。
 
@@ -80,7 +80,7 @@ Solidity 是用于编写在以太坊区块链上运行的智能合约最流行�
 ## 9. [Swarm](http://swarm-gateways.net/bzz:/theswarm.eth/)
 ***
 
-区块链能很好地存储少量的数据。 如果你想要存储病历，销售合同或需要公开时间戳的大型文件该怎么办呢？在区块链中存储大块数据是昂贵并且不可扩展的。Swarm 被用来解决这个问题。 Swarm 是一个去中心化的内容存储和分发服务。您可以将它视为 CDN，但它并不是在一家公司的服务器上托管的所有 CDN，而是通过互联网在计算机上分发。你可以像运行一个以太坊节点一样，去运行一个 Swarm 节点并连接到 Swarm 网络上。
+区块链能很好地存储少量的数据。如果你想要存储病历，销售合同或需要公开时间戳的大型文件该怎么办呢？在区块链中存储大块数据是昂贵并且不可扩展的。Swarm 被用来解决这个问题。 Swarm 是一个去中心化的内容存储和分发服务。您可以将它视为 CDN，但它并不是在一家公司的服务器上托管的所有 CDN，而是通过互联网在计算机上分发。你可以像运行一个以太坊节点一样，去运行一个 Swarm 节点并连接到 Swarm 网络上。
 
 当你将一个以太坊合约部署到区块链时，您会获得一个部署地址和一个 [ABI](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI) JSON 接口（类似于 API 的合约接口）。当你希望有人使用您的合约时，你需要提供部署地址和 ABI。将来，ABI 会被存储在 Swarm 中，以便每个人都可以通过查看以太坊地址来查找 ABI。
 
