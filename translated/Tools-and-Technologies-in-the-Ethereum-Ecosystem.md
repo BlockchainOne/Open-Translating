@@ -83,19 +83,19 @@ Solidity 是用于编写在以太坊区块链上运行的智能合约最流行�
 
 区块链能很好地存储少量的数据。 如果你想要存储病历，销售合同或需要公开时间戳的大型文件该怎么办呢？在区块链中存储大块数据是昂贵并且不可扩展的。Swarm 被用来解决这个问题。 Swarm 是一个去中心化的内容存储和分发服务。您可以将它视为 CDN，但它并不是在一家公司的服务器上托管的所有 CDN，而是通过互联网在计算机上分发。你可以像运行一个以太坊节点一样，去运行一个 Swarm 节点并连接到 Swarm 网络上。
 
-当你将一个以太坊合约部署到区块链时，您会获得一个部署地址和一个 [ABI](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI) JSON 接口（类似于 API 的合约接口）。当你希望有人使用您的合约时，你需要提供部署地址和 ABI 。 将来，ABI 会被存储在 Swarm 中，以便每个人都可以通过查看以太坊地址来查找 ABI。
+当你将一个以太坊合约部署到区块链时，您会获得一个部署地址和一个 [ABI](https://github.com/ethereum/wiki/wiki/Ethereum-Contract-ABI) JSON 接口（类似于 API 的合约接口）。当你希望有人使用您的合约时，你需要提供部署地址和 ABI。将来，ABI 会被存储在 Swarm 中，以便每个人都可以通过查看以太坊地址来查找 ABI。
 
 ## 10. [IPFS](https://ipfs.io/)
 ***
 
-IPFS（星际文件系统）在概念上与 Swarm 非常相似。 它是一个去中心化的存储系统。 与以太坊没有直接关联，但可以与以太坊集成。
+IPFS（星际文件系统）在概念上与 Swarm 非常相似。它是一个去中心化的存储系统。与以太坊没有直接关联，但可以与以太坊集成。
 
 你可以在这里查看 Swarm 和 IPFS 之间的不同: [https://github.com/ethersphere/go-ethereum/wiki/IPFS-&-SWARM](https://github.com/ethersphere/go-ethereum/wiki/IPFS-&amp;-SWARM)
 
 ## 11. [Whisper](https://github.com/ethereum/wiki/wiki/Whisper)
 ***
 
-你可能没怎么听到过 Whisper，不过它也是在以太坊生态系统中一项有趣的技术。 它是 Dapps 之间交互的通信协议。 你可以在这里看到关于它的更多内容: [https://github.com/ethereum/wiki/wiki/Whisper](https://github.com/ethereum/wiki/wiki/Whisper)
+你可能没怎么听到过 Whisper，不过它也是在以太坊生态系统中一项有趣的技术。它是 Dapps 之间交互的通信协议。你可以在这里看到关于它的更多内容: [https://github.com/ethereum/wiki/wiki/Whisper](https://github.com/ethereum/wiki/wiki/Whisper)
 
 下图尝试把所有这些东西放在一起：
 
