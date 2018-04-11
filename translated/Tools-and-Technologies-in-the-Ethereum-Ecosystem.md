@@ -7,8 +7,7 @@
 ## 1. [以太坊](http://ethereum.org/)
 ***
 
-以太坊是一个智能合约区块链平台，在上面你可以创建去中心化的应用程序（也被称为智能合约 【译注：称为 Dapps 更合适】）。如果您是技术专家，那么这个白皮书值得研读：
-[https://github.com/ethereum/wiki/wiki/White-Paper](https://github.com/ethereum/wiki/wiki/White-Paper).
+以太坊是一个智能合约区块链平台，在上面你可以创建去中心化的应用程序（也被称为智能合约 【译注：称为 Dapps 更合适】）。如果您是技术专家，那么这个白皮书值得研读：[https://github.com/ethereum/wiki/wiki/White-Paper](https://github.com/ethereum/wiki/wiki/White-Paper).
 
 如果你之前有创建过 web 应用程序，我有写过一篇[文章](https://medium.com/@mvmurthy/ethereum-for-web-developers-890be23d1d0c#.8wo4bi611)去比较以太坊区块链和 web 应用程序架构，这可能有助于你更深入地了解以太坊。
 
@@ -37,7 +36,7 @@ Geth 是由[以太坊基金会](http://ethereum.org/)提供的官方客户端软
 ## 3. [Parity](https://github.com/paritytech/parity)
 ***
 
-Parity， 用 Rust 语言编写， 是另一个对以太坊协议很好的实现。 这是一个由一家名为 [Parity Inc](https://parity.io/) 的公司维护的非官方客户端。任何人都可以实现这样的客户端软件并加入以太坊网络。 你可以按照这本[黄皮书](https://ethereum.github.io/yellowpaper/paper.pdf) 中的规范来实现自己的客户端！
+Parity，用 Rust 语言编写，是另一个对以太坊协议很好的实现。这是一个由一家名为 [Parity Inc](https://parity.io/) 的公司维护的非官方客户端。任何人都可以实现这样的客户端软件并加入以太坊网络。 你可以按照这本[黄皮书](https://ethereum.github.io/yellowpaper/paper.pdf) 中的规范来实现自己的客户端！
 
 ![](https://i.imgur.com/xQGGQr2.png)
 
