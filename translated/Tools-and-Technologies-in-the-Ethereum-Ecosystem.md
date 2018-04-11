@@ -36,7 +36,7 @@ Geth 是由[以太坊基金会](http://ethereum.org/)提供的官方客户端软
 ## 3. [Parity](https://github.com/paritytech/parity)
 ***
 
-Parity，用 Rust 语言编写，是另一个对以太坊协议很好的实现。这是一个由一家名为 [Parity Inc](https://parity.io/) 的公司维护的非官方客户端。任何人都可以实现这样的客户端软件并加入以太坊网络。 你可以按照这本[黄皮书](https://ethereum.github.io/yellowpaper/paper.pdf) 中的规范来实现自己的客户端！
+Parity，用 Rust 语言编写，是另一个对以太坊协议很好的实现。这是一个由一家名为 [Parity Inc](https://parity.io/)的公司维护的非官方客户端。任何人都可以实现这样的客户端软件并加入以太坊网络。你可以按照这本[黄皮书](https://ethereum.github.io/yellowpaper/paper.pdf) 中的规范来实现自己的客户端！
 
 ![](https://i.imgur.com/xQGGQr2.png)
 
@@ -50,7 +50,7 @@ Parity，用 Rust 语言编写，是另一个对以太坊协议很好的实现�
 ## 5. [Solidity](https://solidity.readthedocs.io/en/develop/)
 ***
 
-Solidity 是用于编写在以太坊区块链上运行的智能合约最流行的编程语言。 它是一种编译时转换为 EVM （以太坊虚拟机）字节码的高级语言。 这与具有诸如 Scala，Groovy，Clojure，JRuby 等 JVM 语言的 java 世界非常相似。所有这些 JVM 语言都可以在编译时生成可在 JVM（Java虚拟机）中运行的字节码。 只要遵循规范，你也可以创建一个像 Solidity 这样的语言，编译时转换为有效的 EVM 字节码！
+Solidity 是用于编写在以太坊区块链上运行的智能合约最流行的编程语言。它是一种编译时转换为 EVM （以太坊虚拟机）字节码的高级语言。 这与具有诸如 Scala，Groovy，Clojure，JRuby 等 JVM 语言的 java 世界非常相似。所有这些 JVM 语言都可以在编译时生成可在 JVM（Java虚拟机）中运行的字节码。 只要遵循规范，你也可以创建一个像 Solidity 这样的语言，编译时转换为有效的 EVM 字节码！
 
 还有一个非常棒的基于浏览器的 IDE，在这里你可以编写智能合约并将其编译部署到区块链上: [http://remix.ethereum.org/](http://remix.ethereum.org/)。
 
